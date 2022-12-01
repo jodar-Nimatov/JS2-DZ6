@@ -167,39 +167,12 @@
       "password": "$2a$10$TSHsnZNCLWT4OSMEhGdEJ.3rtmCdyurRTYp42gt.yatUnAL4wPjLm",
       "login": "maksat22",
       "id": 7
-    },
-    {
-      "email": "ejofdsj@mail.ru",
-      "password": "$2a$10$1bxgLuZDpUrve/amYZTk0..JMOyBcU0jrSphkur2cxeS62hwTylK2",
-      "login": "okasdjfos23ds",
-      "id": 8
-    },
-    {
-      "email": "gfdsgffg@mail.ru",
-      "password": "$2a$10$2vXvX/qZqBv6et01cORGeuHqXlVuZ4KTbghsS9/SohkQ3ffc7nDeu",
-      "login": "sdfgdsgdfs",
-      "id": 9
-    },
-    {
-      "email": "zodarbekN@gmail.com",
-      "password": "$2a$10$wGUl2kCuodGQi0H38Gj4t.RcyXRakQWZpeG8cc0t8TyBD8oLrQhEG",
-      "login": "jodar334",
-      "id": 10
-    },
-    {
-      "email": "jdsiuiufds@mail.ru",
-      "password": "$2a$10$FQruZC/JUFLEQS.KnXRNsOAlPof0ColTs4x2NPhbS2aRDXGB/Ym4y",
-      "login": "jfdshhgfd4",
-      "id": 11
-    },
-    {
-      "email": "ruslangay455@mail.ru",
-      "password": "$2a$10$Shl0qRmxgnzOaslXB1KzU.IgTmRcpTMJZvFOA6NmVlINuF2so7.lS",
-      "login": "ruslanloh777",
-      "id": 12
     }
   ],
   "login": [
-    {}
+    {
+      "email": "kogo889@gmail.com",
+      "password": "123456kojo"
+    }
   ]
 }

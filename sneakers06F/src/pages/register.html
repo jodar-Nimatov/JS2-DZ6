@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Registration</title>
-</head>
-<body>
-    <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="floor">
+      <header class="header">
         <div class="container">
           <nav class="header__nav">
             <div class="header__logo">
@@ -19,12 +23,12 @@
               />
               <div class="header__logo-text">
                 <h1 class="header__logo-title">
-                  <a href="/sneakers06F/index.html" class="header__logo-title-link"
+                  <a href="../../index.html" class="header__logo-title-link"
                     >react sneakers</a
                   >
                 </h1>
                 <p class="header__logo-subtitle">
-                  <a href="index.html" class="header__logo-subtitle"
+                  <a href="../../index.html" class="header__logo-subtitle"
                     >Магазин лучших кроссовок</a
                   >
                 </p>
@@ -65,9 +69,7 @@
                 </span>
                 <span class="total">0</span> руб.
               </p>
-              <a
-                href="./src/pages/favorites.html"
-                class="header__links-favorites"
+              <a href="./favorites.html" class="header__links-favorites"
                 ><span class="header__links-favorites-logo"
                   ><svg
                     width="21"
@@ -82,34 +84,68 @@
                     />
                   </svg> </span
               ></a>
-              
               <p class="header__links-user">
-                <!-- <a href="./src/pages/login.html">Войти</a> -->
-                <a href="/sneakers06F/src/pages/register.html">Войти</a>
+                <a href="./src/pages/login.html">Войти</a>
               </p>
             </div>
           </nav>
         </div>
       </header>
-      <div class="container-register">
-        <form class="register">
-            <h2 class="register__title">Registration</h2>
-            <input class="register__input" type="text" placeholder="Login">
-            <br>
-            <br>
-            <input class="register__input" type="email" placeholder="Email">
-            <br>
-            <br>
-            <input class="register__input" type="password" placeholder="Password">
-            <br>
-            <br>
-            <input class="register__input" type="password" placeholder="Password">
-            <br>
-            <br>
-            <button class="register__btn" type="submit">Registration</button>
-        </form>
-        <span>Already have an accaunt?<a class="login-a" style="padding-left: 5px;" href="./login.html">Sign Up</a></span>
+      <aside class="basket">
+        <div class="basket__content">
+          <div>
+            <h2 class="basket__title">Корзина</h2>
+            <div class="basket__cards"></div>
+          </div>
+
+          <div class="basket__bottom">
+            <div class="basket__text">
+              <p class="basket__text-desc">Итого:</p>
+              <p class="basket__text-sum"><span class="total">0</span> руб.</p>
+            </div>
+            <div class="basket__text">
+              <p class="basket__text-desc">Налог 5%:</p>
+              <p class="basket__text-sum">
+                <span class="percent">0</span> руб.
+              </p>
+            </div>
+            <button class="basket__btn">Оформить заказ</button>
+          </div>
+        </div>
+      </aside>
+      <div class="container">
+        <div class="register">
+          <h2 class="register__title">Регистрация</h2>
+          <form class="register__form">
+            <input class="register__input" type="text" placeholder="Login" />
+            <input class="register__input" type="email" placeholder="Email" />
+            <input
+              class="register__input"
+              type="password"
+              placeholder="Password"
+            />
+            <span class="register__error password-message">
+              Длина пароля должна быть не менее 8 символов</span
+            >
+            <input
+              class="register__input"
+              type="password"
+              placeholder="Confirm password"
+            />
+            <span class="register__error confirmPassword-message"
+              >Пароли не совпадают</span
+            >
+            <button type="submit" class="register__btn">
+              Зарегистроваться
+            </button>
+            <span class="register__sign"
+              >Уже есть аккаунт ? <a href="./login.html">Войти</a></span
+            >
+          </form>
+        </div>
       </div>
-</body>
-<script src="../js/register.js"></script>
+    </div>
+
+    <script type="module" src="../js/register.js"></script>
+  </body>
 </html>

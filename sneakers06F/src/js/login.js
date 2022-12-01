@@ -1,17 +1,40 @@
-let formLogin = document.querySelector('.login')
+import { changeUser, getUserFromLocalStorage } from './user.js';
 
+getUserFromLocalStorage();
+
+let formLogin = document.querySelector('.login');
 formLogin.addEventListener('submit', (e) => {
-    e.preventDefault()
-    
-    fetch('http://localhost:8080/login', {
-    method: "POST",
+  e.preventDefault();
+  let statusCode = null;
+  let messageOutput = document.querySelector('.login-message');
+  let userData = {
+    email: e.target[0].value,
+    password: e.target[1].value,
+  };
+
+  fetch('http://localhost:8080/login', {
+    method: 'POST',
     headers: {
-        "Content-Type": "application/json"
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-        email: e.target[0].value,
-        password: e.target[1].value
+    body: JSON.stringify(userData),
+  })
+    .then((res) => {
+      statusCode = res.status;
+      return res.json();
     })
-}).then((res) => alert('succes', res))
-.catch((err) => alert('error', err))
-})
+    .then((res) => {
+      if (statusCode == '400') {
+        messageOutput.style.display = 'block';
+        messageOutput.textContent = res;
+      }
+      if (statusCode == '200') {
+        messageOutput.style.display = 'none';
+        changeUser({
+          ...res.user,
+          token: res.accessToken,
+        });
+      }
+    })
+    .catch((err) => alert(err));
+});
