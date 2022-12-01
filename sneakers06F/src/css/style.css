@@ -956,3 +956,16 @@ body,
   border-radius: 12px;
   background-color: #f8fcf9;
 }
+.container-register{
+  text-align: center;
+}
+.container-login{
+  text-align: center;
+}
+
+.login-a:hover{
+  color: blue;
+}
+.register-a:hover{
+  color: blue;
+}

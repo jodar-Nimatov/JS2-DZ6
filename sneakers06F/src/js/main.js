@@ -8,17 +8,27 @@ let basketBtn = document.querySelector('.header__links-basket');
 let basketContent = document.querySelector('.basket');
 let basket__inner = document.querySelector('.basket__content');
 let basketList = document.querySelector('.basket__cards')
+let url = 'http://localhost:8080/shoes?'
+
+//total
+let totalBasket = document.querySelectorAll('.total')
+let percentBasket = document.querySelector('.percent')
+
+
 //basket
 let basketData = []
 
 
-let url = 'http://localhost:8080/shoes?'
 let filterPrice = ''
 let filterCategory = ''
 let filterGender = ''
 let filterBrands = ''
 let filterSearchValue = ''
 let emptyBasketTest = ''
+
+const setLocalStorage = () => {
+    localStorage.setItem('basket', JSON.stringify(basketData))
+}
 
 const getShoes = () => {
   shoesList.innerHTML = ''
@@ -74,7 +84,7 @@ const getShoes = () => {
          </defs>
          </svg>
          </span>
-        </div>`//first one is a plus_icon & the second is done_icon
+        </div>`
     }
     
     </div>
@@ -130,6 +140,16 @@ const getBasket = () => {
     </div>
     `
 })
+
+Array.from(totalBasket).forEach((item) => {
+    item.textContent = basketData.reduce((acc, rec) => {
+        return acc + +rec.price
+    }, 0)
+})
+percentBasket.textContent = basketData.reduce((acc, rec) => {
+    return acc + +rec.price
+},0) / 100 * 5;
+
 }
 getBasket()
 
